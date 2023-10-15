@@ -24,11 +24,19 @@ pygame.display.set_caption("Space Sim")
 
 def main():
     running = True
+    # Lock FPS for every computer
+    clock = pygame.time.Clock()
 
     while running:
+        clock.tick(FPS)
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+
+        # Add background
+        window.blit(BG, (0, 0))
+        pygame.display.update()
 
     pygame.quit()
 
