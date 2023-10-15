@@ -44,8 +44,9 @@ def main():
         # Add background
         window.blit(BG, (0, 0))
 
-        # Draw circle where mouse is
+        # Draw circle and line where mouse is on click
         if temp_obj_pos:
+            pygame.draw.line(window, WHITE, temp_obj_pos, mouse_pos, 2)
             pygame.draw.circle(window, RED, temp_obj_pos, OBJ_SIZE)
 
         pygame.display.update()
